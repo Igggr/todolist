@@ -1,0 +1,15 @@
+<hr>
+<mat-card>
+    <mat-card-title>{{category.title}}</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <section class="example-section">
+            <mat-checkbox
+                *ngFor="let todo of category.todos"
+                class="example-margin"
+                [checked]="todo.isCompleted"
+                (change)="setTodoStatus(todo, !todo.isCompleted)"
+                >{{todo.text}}</mat-checkbox>
+        </section>
+    </mat-card-content>
+</mat-card>

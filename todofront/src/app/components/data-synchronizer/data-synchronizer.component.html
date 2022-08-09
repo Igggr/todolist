@@ -1,0 +1,7 @@
+<mat-toolbar color="primary"><div class="task">Задачи</div><div (click)="openDialog()">+</div></mat-toolbar>
+
+<div class="grid-container">
+<app-card *ngFor="let category of categories"
+    [category]="category">{{category}}
+</app-card>
+</div>

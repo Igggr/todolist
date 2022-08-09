@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Category {
+  id: Int!
+  title: String!
+  todos: [Todo!]
+}
+
+type Todo {
+  id: Int!
+  text: String!
+  isCompleted: Boolean!
+  category: Category!
+}
+
+type Query {
+  categories: [Category!]!
+  category(id: Float!): Category!
+  todos: [Todo!]!
+  todosInCategory(category_id: Float!): [Todo!]!
+  todo(id: Int!): Todo!
+}
+
+type Mutation {
+  addCategory(title: String!): Category!
+  setStatus(id: Int!, is_completed: Boolean!): Todo!
+  createTodo(input: CreateTodoInput!): Todo!
+}
+
+input CreateTodoInput {
+  text: String!
+  categoryName: String!
+}
