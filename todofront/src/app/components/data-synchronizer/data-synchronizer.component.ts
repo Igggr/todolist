@@ -52,7 +52,6 @@ export class DataSynchronizerComponent implements OnInit {
       TodoDialogComponent,
       {
         width: '500px',
-        height: '500px',
         data: { categories: this.categories, ref: this }
       }
     );

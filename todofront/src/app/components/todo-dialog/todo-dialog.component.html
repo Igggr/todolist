@@ -1,6 +1,7 @@
-<hr>
 <mat-card>
-    <mat-card-title>Новая задача</mat-card-title>
+    <mat-card-header>
+        <mat-card-title>Новая задача</mat-card-title>
+    </mat-card-header>
     <mat-divider></mat-divider>
     <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
         <mat-card-content>
@@ -39,7 +40,7 @@
         </mat-card-content>
         <mat-card-actions>
             <button mat-button mat-dialog-close>Отмена</button>
-            <button mat-button color="primary" type="submit">Ок</button>
+            <button mat-button type="submit">Ок</button>
         </mat-card-actions>
     </form>
 </mat-card>

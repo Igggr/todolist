@@ -1,0 +1,28 @@
+mat-form-field {
+    display: block;
+}
+
+mat-card-header {
+    justify-content: center;
+}
+
+mat-card-actions {
+    display: flex;
+}
+
+mat-card-actions > button {
+    flex-grow: 1;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    font-size: medium;
+
+}
+
+mat-card-actions > button[type] {
+    background-color: #3CAEDC;
+}
+
+mat-card-actions > button[mat-dialog-close] {
+    background-color: #9F9FA1;
+}
