@@ -59,7 +59,8 @@ export class TodoDialogComponent {
     } else {
       this.subscription =  this.todoService.uploadTodo(task_text, category_name)
       .subscribe((response) => {
-          this.data.ref.refetch(this.data.ref);
+          console.log(response)
+          setTimeout(() => { this.data.ref.refetch(this.data.ref); }, 2000)
           this.dialogRef.close();
         });
       

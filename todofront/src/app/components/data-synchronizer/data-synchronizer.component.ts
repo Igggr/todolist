@@ -36,10 +36,6 @@ export class DataSynchronizerComponent implements OnInit {
       self.categories = res.data.categories;
       console.log('finish refetch')
     })
-      // //.valueChanges
-      // .subscribe(({ data, }) => {
-      //   self.categories = data.categories;
-      // }).unsubscribe();
   }
 
 
