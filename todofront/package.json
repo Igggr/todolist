@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-front": "rm -rf ../todolist/front && mkdir ../todolist/front && ng build --prod && mv dist/todofront/* ../todolist/front/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
