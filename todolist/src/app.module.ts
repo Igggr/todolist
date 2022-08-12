@@ -26,7 +26,7 @@ import { TodoResolver } from './resolvers/todo.resolver';
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
         host: process.env.DATABASE_URL || configService .get('POSTGRES_HOST'),
-        port: configService.get('POSTGRES_PORT'),
+        port: parseInt(process.env.POSTGRES_PORT) || configService.get('POSTGRES_PORT'),
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
