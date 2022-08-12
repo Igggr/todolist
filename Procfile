@@ -1,0 +1,1 @@
+web: cd todofront; npm i; npm run build-front; cd ../todolist; npm i; npm run start:prod 
